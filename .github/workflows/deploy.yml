@@ -32,7 +32,7 @@ jobs:
           static_site_generator: nuxt
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Static HTML export with Nuxt
         run: bun run generate
