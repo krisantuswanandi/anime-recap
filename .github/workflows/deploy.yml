@@ -31,16 +31,6 @@ jobs:
         with:
           static_site_generator: nuxt
 
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .nuxt
-            node_modules
-          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
-
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
