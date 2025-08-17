@@ -50,7 +50,7 @@ useSeoMeta({
       <nav class="mb-6 text-sm">
         <NuxtLink to="/" class="hover:text-gray-700">Home</NuxtLink>
         <span class="mx-2">/</span>
-        <NuxtLink to="/anime" class="hover:text-gray-700">Anime List</NuxtLink>
+        <NuxtLink to="/anime" class="hover:text-gray-700">Anime</NuxtLink>
         <span class="mx-2">/</span>
         <span class="">{{ animeInfo.title }}</span>
       </nav>
@@ -73,10 +73,7 @@ useSeoMeta({
           </UBadge>
         </h1>
 
-        <p
-          v-if="animeInfo.description"
-          class="text-lg text-gray-700 dark:text-gray-500 mb-4"
-        >
+        <p class="text-lg text-gray-700 dark:text-gray-500 mb-4">
           {{ animeInfo.description }}
         </p>
 
@@ -111,7 +108,7 @@ useSeoMeta({
                 :to="episode.path"
                 class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                Episode {{ episode.episode }}, "{{ episode.meta.episodeTitle }}"
+                Episode {{ episode.meta.episodeDisplay }}, "{{ episode.title }}"
               </NuxtLink>
             </h2>
 

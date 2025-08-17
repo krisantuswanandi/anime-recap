@@ -1,18 +1,15 @@
 ---
 title: "The Sphere"
 titleRomaji: "Tenkai"
-episodeTitle: "The Sphere"
-episodeTitleRomaji: "Tenkai"
-anime: "gachiakuta"
 animeTitle: "Gachiakuta"
+animeTitleRomaji: "Gachiakuta"
 episode: 1
-episodeNumber: 1
-episodeNumberDisplay: 1
+episodeDisplay: 1
 airedDate: "2025-07-06"
 description: 'The premiere episode of Gachiakuta plunges us into a dystopian world rigidly divided. High above, in the "Sphere" live the wealthy and noble, amidst a magnificent city with pristine white streets. Below, in the "slums" dwell the "tribe folk" who are poor, abandoned, and treated as outcasts. This lower realm was originally built as a prison for criminals, and its inhabitants, seen as their descendants, face constant discrimination and struggle to improve their image.'
 ---
 
-# A Descent into a Divided World
+## A Descent into a Divided World
 
 The premiere episode of Gachiakuta plunges us into a dystopian world rigidly divided. High above, in the [Sphere](https://gachiakuta.fandom.com/wiki/Sphere){target="_blank"} live the wealthy and noble, amidst a magnificent city with pristine white streets. Below, in the slums dwell the [tribe folk](https://gachiakuta.fandom.com/wiki/Tribe_folk){target="_blank"} who are poor, abandoned, and treated as outcasts. This lower realm was originally built as a prison for criminals, and its inhabitants, seen as their descendants, face constant discrimination and struggle to improve their image.
 

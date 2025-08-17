@@ -1,0 +1,2 @@
+- show images in the recap
+- revamp the layout, mobile first

@@ -44,17 +44,19 @@ useSeoMeta({
       <nav class="mb-6 text-sm text-gray-500">
         <NuxtLink to="/" class="hover:text-gray-700">Home</NuxtLink>
         <span class="mx-2">/</span>
-        <NuxtLink :to="`/anime/${data.meta.anime}`" class="hover:text-gray-700">
+        <NuxtLink to="/anime" class="hover:text-gray-700">Anime</NuxtLink>
+        <span class="mx-2">/</span>
+        <NuxtLink :to="data.path.split('/episode')[0]" class="hover:text-gray-700">
           {{ data.meta.animeTitle }}
         </NuxtLink>
         <span class="mx-2">/</span>
-        <span class="hover:text-gray-700">Episode {{ data.episode }}</span>
+        <span class="hover:text-gray-700">Episode {{ data.meta.episodeDisplay }}</span>
       </nav>
 
       <!-- Episode Header -->
       <header class="mb-8">
         <h1 class="text-3xl font-bold mb-1">
-          {{ data.meta.animeTitle }} Episode {{ data.meta.episodeNumber }}, "{{
+          {{ data.meta.animeTitle }} Episode {{ data.meta.episodeDisplay }}, "{{
             data.title
           }}"
         </h1>
@@ -77,7 +79,7 @@ useSeoMeta({
       <footer class="mt-12 pt-6 border-t border-gray-200">
         <div class="flex justify-between items-center">
           <NuxtLink
-            :to="`/anime/${data.anime}`"
+            :to="data.path.split('/episode')[0]"
             class="inline-flex items-center text-blue-500 dark:text-blue-400 hover:text-blue-800 hover:dark:text-blue-600"
           >
             <UIcon name="lucide:chevron-left" class="mr-2" />

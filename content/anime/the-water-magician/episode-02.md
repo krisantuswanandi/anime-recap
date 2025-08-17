@@ -1,0 +1,44 @@
+---
+title: "Abel the Castaway"
+titleRomaji: "Hyouryuusha Abel"
+animeTitle: "The Water Magician"
+animeTitleRomaji: "Mizu Zokusei no Mahou Tsukai"
+episode: 2
+episodeDisplay: 2
+airedDate: "2025-07-11"
+description: "Ryo stumbles upon a shipwreck scattered across the shore. Amidst the wreckage, he finds Abel, a red-haired swordsman in worn armor, barely clinging to life. Being the good guy he is, Ryo brings Abel back to his simple cabin and nurses him back to health. Abel's a bit thrown off by Ryo's scruffy look and the fact that he couldn't sense Ryo at all, but he quickly becomes grateful for being saved."
+---
+
+## Unexpected Company and a New Path
+
+So, Episode 2 kicks off on a pretty somber note, with [Ryo](https://mizuzokusei.fandom.com/wiki/Ry%C5%8D){target="_blank"} stumbling upon a shipwreck scattered across the shore. Amidst the wreckage, he finds [Abel](https://mizuzokusei.fandom.com/wiki/Abel){target="_blank"}, a red-haired swordsman in worn armor, barely clinging to life. Being the good guy he is, Ryo brings Abel back to his simple cabin and nurses him back to health. Abel's a bit thrown off by Ryo's scruffy look and the fact that he couldn't sense Ryo at all, but he quickly becomes grateful for being saved.
+
+Abel reveals he was on a smuggler ship that got wrecked by a giant octopus monster and he's the only survivor. Ryo gets a peek into Abel's world, learning about mercenaries and conflict. During their chats, Ryo also learns that Abel hunts for his food, but then he shows off his water magic, proving he's got a much cooler way to get dinner. Abel is super impressed, noting that in the central provinces, only about half the population can use magic, which makes Ryo's 20% figure from Michael seem even more unique. Abel eventually asks Ryo to be his guide to the town of Lune, which is up north, and Ryo agrees, asking for a day to prep.
+
+## A Touching Farewell and the Journey Begins
+
+Before hitting the road, Ryo makes a special trip to the glowing lake to say goodbye to his personal trainer, the Dullahan. He's super thankful for all the intense training he's received. They have one last epic sparring session, and Ryo really shows how much he's grown, pushing the Dullahan back with his relentless strikes. As a heartfelt parting gift, the Dullahan pulls a magic suit/white robe from the water and gifts it to Ryo. Ryo is absolutely thrilled to receive it.
+
+The next morning, Ryo and Abel set off on their journey north, with Ryo rocking his new outfit. Ryo feels a little nostalgic leaving his peaceful home behind, knowing his slow life is taking a detour.
+
+## Forest Encounters and Expanding Horizons
+
+Their journey through the woods is anything but boring. They quickly run into a wild boar. Abel, being a skilled swordsman, insists on handling it himself and shows off his combat skill called Total Impalement, creates a hole in that boar and it dies on the spot. Ryo is pretty amazed, having never seen combat skills before.
+
+Later, they encounter some lizard men in a swamp. Abel wants to avoid them, but Ryo senses they're being followed, so a fight is inevitable. Ryo blows Abel's mind by effortlessly blitzing four lizardmen with his icicle lances without a staff. Abel is shocked, mentioning that his wind mage friends can only cast one spell at a time, but Ryo casually suggests it must be a wind magic problem, as this is "pretty normal for water magic".
+
+As they travel, Abel introduces Ryo to the concept of money (a bronze florin), which Ryo has never seen before. Abel also explains about the three major nations in the Central Provinces: the Kingdom of Knightley (where Lune is), the Debuhi Empire, and the Handalieu Federation. Ryo, being Ryo, finds the name "Debuhi" pretty ridiculous and teases Abel about it.
+
+Next up, they stumble into a nest of rock golems. Ryo is surprised they aren't humanoid like he imagined. Abel's attacks are useless as the golems regenerate, so Ryo steps in. He devises a new strategy, creating a massive ice cube (made of 10 layers of ice walls) and dropping it on the golems, squishing them flat and thoroughly impressing Abel with his power. They even find a valuable magic stone inside one of them.
+
+Their journey continues with more amazing sights, like a gigantic croc-hippo hybrid called a behemoth, a super rare and powerful monster that Abel says is impossible to hunt. They then witness a battle between monsters as wyverns attack the behemoth. The behemoth lets out a mighty roar, using a magic cancellation skill that knocks the wyverns out of the sky.
+
+Ryo gets super excited when Abel mentions dungeons, learning there's one in Lune, which he jokingly complains Abel didn't tell him earlier. Abel also fills Ryo in on other races like dwarves (skilled smiths and fighters, some in Lune) and elves (mostly in forests, only one in Lune).
+
+## The Mountain Range and Civilization
+
+As they approach a mountain range, Ryo confidently states they'll find human settlement on the other side, knowledge he got from the friendly dragon, Lewin. He keeps his source a secret from Abel, calling it "knowledge beyond human comprehension".
+
+Things get hairy when a powerful Griffin appears. While Abel panics, Ryo quickly throws a chunk of meat, and the griffin takes the offering and flies off, much to their relief. Abel muses that humans haven't encountered behemoths or griffins in a hundred years, suggesting something's strange about this place, though Ryo thinks humans just aren't looking hard enough.
+
+They soon spot more wyverns feeding. Abel explains it takes at least 20 experienced adventurers to take down just one. But Ryo, ever the strategist, decides they should fight. He pins them down by stabbing their wings with four icicles (and this time, Abel notices Ryo doesn't chant a spell, making him suspicious!). Abel finishes them off, and they collect the magic stones/ Finally, after all these wild encounters, they reach the summit of the mountain and are greeted by the sight of a human settlement on the other side.

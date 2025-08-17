@@ -53,8 +53,8 @@ useSeoMeta({
             :to="episode.path"
             class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
-            {{ episode.meta.animeTitle }} Episode {{ episode.episode }}, "{{
-              episode.meta.episodeTitle
+            {{ episode.meta.animeTitle }} Episode {{ episode.episodeDisplay }}, "{{
+              episode.title
             }}"
           </NuxtLink>
         </h2>

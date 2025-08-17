@@ -1,12 +1,8 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-.prose h1 {
-  @apply text-2xl font-bold;
-}
-
 .prose h2 {
-  @apply text-lg font-bold mt-8;
+  @apply text-xl font-bold mt-8;
 }
 
 .prose p {
