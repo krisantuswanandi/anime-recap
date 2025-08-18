@@ -1,2 +1,5 @@
 - show images in the recap
 - revamp the layout, mobile first
+- recap generator
+- text to audio
+- link to anilist / mal

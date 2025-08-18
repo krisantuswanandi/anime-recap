@@ -1,0 +1,40 @@
+---
+title: "To You in 2016"
+titleRomaji: "2016-nen no Kimi e"
+animeTitle: "Takopi's Original Sin"
+animeTitleRomaji: "Takopii no Genzai"
+episode: 1
+episodeDisplay: 1
+airedDate: "2025-06-28"
+description: "Takopi, a cheerful alien from the distant Planet Happy, crash-landed on Earth, his sole mission echoing across the cosmos: to spread joy and happiness throughout the universe. Lost, hungry, and utterly alone, he wandered the unfamiliar streets until a glimmer of kindness reached him. A quiet fourth-grader named Shizuka Kuze stumbled upon him, offering a piece of leftover bread from her lunch."
+---
+
+## The Arrival of a Cheerful Alien
+
+[Takopi](https://takopis-original-sin.fandom.com/wiki/Takopi), a cheerful alien from the distant [Planet Happy](https://takopis-original-sin.fandom.com/wiki/Planet_Happy), crash-landed on Earth, his sole mission echoing across the cosmos: to spread joy and happiness throughout the universe. Lost, hungry, and utterly alone, he wandered the unfamiliar streets until a glimmer of kindness reached him. A quiet fourth-grader named [Shizuka Kuze](https://takopis-original-sin.fandom.com/wiki/Shizuka_Kuze) stumbled upon him, offering a piece of leftover bread from her lunch.
+
+This small act of grace touched Takopi deeply, and for his resemblance to an octopus, Shizuka bestowed upon him the endearing nickname "Takopi". Grateful and innocent, Takopi, eager to return her kindness, offered Shizuka one of his miraculous [Happy Gadgets](https://takopis-original-sin.fandom.com/wiki/Happy_Gadgets) – a pair of wings that promised flight. Yet Shizuka's response chilled him: a cold refusal, "Even if I could fly nothing would change", a chilling hint at an unseen pain. As she walked away, Takopi noticed the grim reality of her school bag, soiled and defaced with hateful words like "die" and "idiot".
+
+## A Glimpse of True Suffering
+
+Each day, Takopi tried to bring a smile to Shizuka's face with his whimsical gadgets, but she consistently declined. He began to observe her world with innocent curiosity, soon witnessing the cruel reality of her school life: relentless bullying, particularly from [Marina](https://takopis-original-sin.fandom.com/wiki/Marina_Kirarazaka), a blonde girl who took pleasure in breaking Shizuka's belongings, earning compliments from others. Marina mocked Shizuka for being poor, accusing her of living off welfare money, while teachers often turned a blind eye to the torment. Shizuka endured it all quietly, as if she were terribly used to it.
+
+One day, Shizuka invited Takopi to her humble home to feed [Chappy](https://takopis-original-sin.fandom.com/wiki/Chappy), her dog. In a quiet, heavy moment, she revealed her father was gone, and her mother, an escort, was rarely present, leaving her alone. Chappy, she confessed, was her only comfort. With a fragile smile, she declared she could be happy as long as they were together, and for the first time, Takopi saw a genuine, profound joy on her face. He vowed to continue his efforts to make her smile.
+
+## The Unthinkable and a Desperate Rewind
+
+The fleeting joy was short-lived. The very next day, Shizuka appeared with visible scratches and bruises, claiming she had fought with a friend. Takopi, still oblivious to the true depth of her despair, offered a reconciliation ribbon, a gadget designed to mend broken friendships by linking two people's fingers. For the first time, Shizuka accepted a gadget, but she insisted on taking it home alone, a request that violated Happy Planet's rules. Trusting her, Takopi reluctantly agreed, hoping it would bring her happiness.
+
+Later that day, a growing unease compelled Takopi to visit Shizuka’s house. What he discovered shattered his innocent world: Shizuka had taken her own life, the very ribbon he had given her wrapped around her neck. Overwhelmed with grief and self-blame for disobeying his planet's rules, Takopi remembered another gadget: the Happy Camera. It held a hidden power—to transport him back to the moment a photo was taken. Desperate, he activated it, and time rewound to a few days earlier, to the morning they had taken a selfie together.
+
+## A New Path and a Brutal Revelation
+
+With a second chance before him, Takopi was resolute: he would not merely offer gadgets; he would uncover the true source of Shizuka’s suffering and genuinely save her. Using another gadget, he disguised himself as a flower and secretly followed Shizuka to school. What unfolded before him was horrifying: Marina’s constant, cruel bullying, daily humiliations, calling Shizuka a "parasite", spreading vicious rumors, and even having a friend steal Shizuka’s notebook. Still naive, Takopi initially believed Shizuka’s death was due to forgotten homework, so he rewound time again and provided her with the answers.
+
+This intervention, however, only infuriated Marina further, as Takopi’s actions consistently thwarted her attempts to torment Shizuka. When Marina summoned Shizuka to the equipment room for a "talk", Shizuka was terrified. Takopi, armed with his Transformation Palette, bravely assumed Shizuka’s form, believing he could resolve the conflict through simple conversation. Instead, Marina mercilessly beat him, mocked him, and brutally stabbed him in the eye with a mechanical pencil. In that brutal moment, Takopi finally grasped the deeper, personal root of Marina's rage: her father was having an affair with Shizuka’s mother. This was not mere schoolyard bullying; it was a furious act of revenge.
+
+## Flickers of Hope in a Dark Reality
+
+The day repeated itself once more. This time, as Shizuka was called to the meeting, Takopi, transformed into her, fled directly to a teacher for help. This intervention, though not a complete solution, spared Shizuka from the worst of the beating, leaving her with only a bruised face. Later, [Azuma](https://takopis-original-sin.fandom.com/wiki/Naoki_Azuma), a classmate, urged Shizuka to speak with more teachers about the bullying, but she refused, too accustomed to her suffering. Quietly, Shizuka thanked Takopi, admitting that while her life had been unbearable, it had improved slightly since his arrival. Takopi, still burdened by the feeling of failure, made a new, solemn promise: he would continue to help her, ensuring she would never again have to die.
+
+The narrative then shifted, offering a glimpse into Marina’s world. Furious from her thwarted efforts to torment Shizuka, Marina returned home to a scene of chaos. Her mother sat desperate amidst the mess, complaining bitterly that her husband was dining with "that woman" once more. Marina’s eyes, once fierce and cruel, now betrayed the raw depths of her own suffering. The episode concluded with a quiet, haunting image: Shizuka, Chappy, and Takopi sleeping peacefully together.
