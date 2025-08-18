@@ -3,3 +3,4 @@
 - recap generator
 - text to audio
 - link to anilist / mal
+- giscus integration
