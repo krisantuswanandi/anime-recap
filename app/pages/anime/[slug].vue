@@ -31,6 +31,26 @@ useSeoMeta({
   title: `${animeInfo.value?.title} | Anime Recap`,
   description: `Browse episode recaps for ${animeInfo.value?.title}`,
 });
+
+const showMore = ref(false);
+
+const displayedDescription = computed(() => {
+  if (!animeInfo.value?.description) return "";
+
+  if (showMore.value) {
+    return animeInfo.value.description;
+  }
+  
+  const words = animeInfo.value.description.split(" ");
+  return words.length > 15 ? words.slice(0, 15).join(" ") + "..." : animeInfo.value.description;
+});
+
+const shortenDescription = (description) => {
+  if (!description) return "";
+
+  const words = description.split(" ");
+  return words.length > 40 ? words.slice(0, 40).join(" ") + "..." : description;
+};
 </script>
 
 <template>
@@ -74,7 +94,13 @@ useSeoMeta({
         </h1>
 
         <p class="text-lg text-gray-700 dark:text-gray-500 mb-4">
-          {{ animeInfo.description }}
+          {{ displayedDescription }}
+          <button
+            class="text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+            @click="showMore = !showMore"
+          >
+            {{ showMore ? "show less" : "show more" }}
+          </button>
         </p>
 
         <div class="flex items-center space-x-4">
@@ -119,12 +145,12 @@ useSeoMeta({
             </div>
 
             <p class="text-gray-600 dark:text-gray-300">
-              {{ episode.description }}
+              {{ shortenDescription(episode.description) }}
               <NuxtLink
                 :to="episode.path"
-                class="inline-flex items-center text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                class="text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
               >
-                Read more...
+                read more
               </NuxtLink>
             </p>
           </article>

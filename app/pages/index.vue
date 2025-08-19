@@ -23,8 +23,6 @@ useSeoMeta({
 const shortenDescription = (description) => {
   if (!description) return "";
 
-  // return first 40 words (split by space)
-  // if not enough words, return full description
   const words = description.split(" ");
   return words.length > 40 ? words.slice(0, 40).join(" ") + "..." : description;
 };
@@ -78,7 +76,7 @@ const shortenDescription = (description) => {
           {{ shortenDescription(episode.description) }}
           <NuxtLink
             :to="episode.path"
-            class="inline-flex items-center text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+            class="text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
           >
             read more
           </NuxtLink>
