@@ -19,6 +19,15 @@ useSeoMeta({
   title: "Latest Episodes | Anime Recap",
   description: "Stay updated with the latest anime episode recaps.",
 });
+
+const shortenDescription = (description) => {
+  if (!description) return "";
+
+  // return first 40 words (split by space)
+  // if not enough words, return full description
+  const words = description.split(" ");
+  return words.length > 40 ? words.slice(0, 40).join(" ") + "..." : description;
+};
 </script>
 
 <template>
@@ -53,7 +62,7 @@ useSeoMeta({
             :to="episode.path"
             class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
-            {{ episode.meta.animeTitle }} Episode {{ episode.episodeDisplay }}, "{{
+            {{ episode.meta.animeTitle }} Episode {{ episode.meta.episodeDisplay }}, "{{
               episode.title
             }}"
           </NuxtLink>
@@ -66,12 +75,12 @@ useSeoMeta({
         </div>
 
         <p class="text-gray-600 dark:text-gray-300">
-          {{ episode.description }}
+          {{ shortenDescription(episode.description) }}
           <NuxtLink
             :to="episode.path"
             class="inline-flex items-center text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
           >
-            Read more...
+            read more
           </NuxtLink>
         </p>
       </article>
