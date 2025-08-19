@@ -4,3 +4,4 @@
 - text to audio
 - link to anilist / mal
 - giscus integration
+- share to social media

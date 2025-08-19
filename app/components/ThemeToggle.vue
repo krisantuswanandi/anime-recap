@@ -1,20 +1,15 @@
+<script setup>
+const colorMode = useColorMode()
+</script>
+
 <template>
   <UButton
-    :icon="isDark ? 'i-heroicons-sun' : 'i-heroicons-moon'"
+    :icon="colorMode.value === 'dark' ? 'lucide:moon' : 'lucide:sun'"
     size="sm"
-    color="gray"
+    color="neutral"
     variant="ghost"
     aria-label="Toggle theme"
-    @click="toggleTheme"
+    @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
   />
 </template>
 
-<script setup>
-const colorMode = useColorMode()
-
-const isDark = computed(() => colorMode.value === 'dark')
-
-const toggleTheme = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-}
-</script>
