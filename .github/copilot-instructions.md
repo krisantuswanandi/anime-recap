@@ -48,6 +48,7 @@
 - **Content**: Keep `/content` directory at root level (not in `/app`)
 - **Components**: Auto-imported from `/app/components`
 - **Pages**: Located in `/app/pages` with file-based routing
+ - **Home Page Sections**: `RecentlyAdded.vue` and `PopularAnime.vue` components encapsulate the homepage sections. Prefer extracting sizable page sections into dedicated components.
 
 ## Nuxt Content v3 Guidelines
 
@@ -61,21 +62,6 @@
 
 - **AGENTS.md Maintenance**: ALWAYS update this file when making changes to project structure, adding new features, changing conventions, or establishing new patterns. This ensures all future assistance follows the latest project standards.
 - **Development Server**: NEVER kill the "nuxt dev" process - the user keeps it running continuously. Only start it if testing is needed and it's not already running.
-
-## Recent Changes (2025-08-30)
-
-- Homepage now shows 5 latest episode recaps (was 10) and includes a CTA link to `/recap`.
-- Added page `/app/pages/recap.vue` listing episodes with client-side pagination:
-  - Initial load: 5 items, ordered by `airedDate` DESC.
-  - "See more" loads the next 5 using a cursor on `airedDate` with `.where("airedDate", "<", last.airedDate)`.
-  - Uses Nuxt Content v3 `queryCollection('episodes')` with `.order`, `.where(field, op, value)`, `.limit`, `.all()`.
-  - Button component from `@nuxt/ui` (fallback to HTML button if replacing `UButton`).
-
-- Added page `/app/pages/anime/index.vue` listing anime with client-side pagination:
-  - Initial load: 5 items from `animes` collection, ordered by `startDate` DESC.
-  - "See more" loads the next 5 with `.where("startDate", "<", last.startDate)`.
-  - `content.config.ts` updated: `animes` collection now includes a schema with `startDate` etc. for strong typing.
-  - Homepage Popular Anime section has a "See all anime" CTA linking to `/anime`.
 
 ## Notes
 

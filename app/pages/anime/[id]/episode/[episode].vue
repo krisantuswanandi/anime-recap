@@ -2,7 +2,7 @@
 const route = useRoute();
 
 const { data, error } = await useAsyncData(`${route.params.id}-${route.params.episode}`, () => {
-  return queryCollection("episodes").path(`/${route.params.id}/episode/${route.params.episode.padStart(4, '0')}`).first();
+  return queryCollection("episodes").path(`/anime/${route.params.id}/episode/${route.params.episode.padStart(4, '0')}`).first();
 });
 
 if (!data.value) {
