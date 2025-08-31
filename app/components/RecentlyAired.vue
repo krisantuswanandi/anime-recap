@@ -18,13 +18,16 @@ function formatDate(dateString) {
 
 <template>
   <div>
-    <div>
+  <div class="flex items-center justify-between">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
         Recently Aired
       </h1>
-      <p class="text-gray-600 dark:text-gray-300">
-        Recent anime episode recaps
-      </p>
+      <NuxtLink
+        to="/recap"
+    class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
+      >
+        See all recaps
+      </NuxtLink>
     </div>
 
     <div v-if="pending" class="text-center py-8">
@@ -78,14 +81,7 @@ function formatDate(dateString) {
       <p class="text-gray-500 dark:text-gray-400">No episodes found.</p>
     </div>
 
-    <div class="mt-6">
-      <NuxtLink
-        to="/recap"
-        class="inline-flex items-center px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 no-underline"
-      >
-        See all recaps
-      </NuxtLink>
-    </div>
+    
   </div>
   
 </template>

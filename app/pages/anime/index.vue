@@ -73,10 +73,13 @@ useSeoMeta({
     </div>
 
     <div v-else-if="items.length" class="grid grid-cols-5 gap-4 mt-4">
-      <NuxtLink v-for="anime in items" :key="anime.path" :to="anime.path" class="block">
-        <NuxtImg :src="anime.cover" class="rounded w-full aspect-[3/4]" />
-        <span class="font-bold text-gray-900 dark:text-white">{{ anime.title }}</span>
-      </NuxtLink>
+      <AnimeCard
+        v-for="anime in items"
+        :key="anime.path"
+        :to="anime.path"
+        :cover="anime.cover"
+        :title="anime.title"
+      />
     </div>
 
     <div v-if="!initialPending && !error" class="mt-6 flex justify-center">

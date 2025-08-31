@@ -7,9 +7,9 @@ useSeoMeta({
 
 <template>
   <div>
-    <RecentlyAired />
+    <AllAnime />
     <div class="mt-12">
-      <AllAnime />
+      <RecentlyAired />
     </div>
   </div>
 </template>
