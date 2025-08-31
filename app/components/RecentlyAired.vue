@@ -1,30 +1,22 @@
-<script setup>
+<script setup lang="ts">
 const {
   data: episodes,
   pending,
   error,
 } = await useAsyncData(() => {
-  return queryCollection("episodes").order("airedDate", "DESC").limit(5).all();
+  return queryCollection("episodes").order("airedDate", "DESC").limit(6).all();
 });
-
-function formatDate(dateString) {
-  return new Date(dateString).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
 </script>
 
 <template>
   <div>
-  <div class="flex items-center justify-between">
-      <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+    <div class="flex items-baseline justify-between">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
         Recently Aired
       </h1>
       <NuxtLink
         to="/recap"
-    class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
+        class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
       >
         See all recaps
       </NuxtLink>
@@ -40,48 +32,30 @@ function formatDate(dateString) {
       </p>
     </div>
 
-    <div v-else-if="episodes && episodes.length > 0" class="mt-4 space-y-4">
-      <NuxtLink
+    <div
+      v-else-if="episodes && episodes.length > 0"
+      class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4"
+    >
+      <ArticleCard
         v-for="episode in episodes"
         :key="episode.id"
         :to="episode.path"
-        class="block no-underline"
+        :image="
+          typeof episode.meta.thumbnail === 'string'
+            ? episode.meta.thumbnail
+            : undefined
+        "
+        :image-alt="`${episode.meta.animeTitle} episode ${episode.meta.episodeDisplay} thumbnail`"
+        :title="episode.title"
+        :subtitle="`${episode.meta.animeTitle} Episode ${episode.meta.episodeDisplay}`"
+        :date="episode.airedDate"
+        :description="episode.description"
         :aria-label="`${episode.meta.animeTitle} Episode ${episode.meta.episodeDisplay}, ${episode.title}`"
-      >
-        <article class="flex gap-4">
-          <div class="rounded min-w-52 h-30 bg-gray-300 overflow-hidden">
-            <NuxtImg
-              v-if="episode.meta.thumbnail"
-              :src="episode.meta.thumbnail"
-              class="w-full h-full"
-            />
-          </div>
-
-          <div>
-            <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-              {{ episode.meta.animeTitle }} Episode
-              {{ episode.meta.episodeDisplay }}, "{{ episode.title }}"
-            </h2>
-
-            <div
-              class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400"
-            >
-              <span>{{ formatDate(episode.airedDate) }}</span>
-            </div>
-
-            <p class="text-gray-600 dark:text-gray-300 mt-2 line-clamp-2">
-              {{ episode.description }}
-            </p>
-          </div>
-        </article>
-      </NuxtLink>
+      />
     </div>
 
     <div v-else class="text-center py-8">
       <p class="text-gray-500 dark:text-gray-400">No episodes found.</p>
     </div>
-
-    
   </div>
-  
 </template>

@@ -1,9 +1,16 @@
 <script setup>
 const route = useRoute();
 
-const { data, error } = await useAsyncData(`${route.params.id}-${route.params.episode}`, () => {
-  return queryCollection("episodes").path(`/anime/${route.params.id}/episode/${route.params.episode.padStart(4, '0')}`).first();
-});
+const { data, error } = await useAsyncData(
+  `${route.params.id}-${route.params.episode}`,
+  () => {
+    return queryCollection("episodes")
+      .path(
+        `/anime/${route.params.id}/episode/${route.params.episode.padStart(4, "0")}`
+      )
+      .first();
+  }
+);
 
 if (!data.value) {
   throw createError({
@@ -16,7 +23,7 @@ if (!data.value) {
 const { data: surround } = await useAsyncData(
   `${route.params.id}-${route.params.episode}-surround`,
   async () => {
-    const currentPath = `/anime/${route.params.id}/episode/${route.params.episode.padStart(4, '0')}`;
+    const currentPath = `/anime/${route.params.id}/episode/${route.params.episode.padStart(4, "0")}`;
     const scope = `/anime/${route.params.id}/episode/%`;
     try {
       // Try using surround API, ordered by airedDate within the same anime
@@ -62,6 +69,18 @@ useSeoMeta({
   ogTitle: data.value?.title,
   ogDescription: data.value?.description,
 });
+
+const breadcrumbs = computed(() => [
+  { label: "Home", to: "/" },
+  { label: "Anime", to: "/anime" },
+  {
+    label: data.value?.meta?.animeTitle ?? route.params.id,
+    to: data.value?.path?.split("/episode")[0],
+  },
+  {
+    label: `Episode ${data.value?.meta?.episodeDisplay ?? route.params.episode}`,
+  },
+]);
 </script>
 
 <template>
@@ -77,34 +96,22 @@ useSeoMeta({
     </div>
 
     <article v-else-if="data" class="max-w-4xl mx-auto">
-      <!-- Breadcrumb -->
-      <nav class="mb-6 text-sm text-gray-500">
-        <NuxtLink to="/" class="hover:text-gray-700">Home</NuxtLink>
-        <span class="mx-2">/</span>
-        <NuxtLink to="/anime" class="hover:text-gray-700">Anime</NuxtLink>
-        <span class="mx-2">/</span>
-        <NuxtLink :to="data.path.split('/episode')[0]" class="hover:text-gray-700">
-          {{ data.meta.animeTitle }}
-        </NuxtLink>
-        <span class="mx-2">/</span>
-        <span class="hover:text-gray-700">Episode {{ data.meta.episodeDisplay }}</span>
-      </nav>
+      <Breadcrumbs :items="breadcrumbs" />
 
       <!-- Episode Header -->
-      <header class="mb-8">
+      <header class="mt-8">
         <h1 class="text-3xl font-bold mb-1">
           {{ data.meta.animeTitle }} Episode {{ data.meta.episodeDisplay }}, "{{
             data.title
           }}"
         </h1>
-
-        <div class="text-gray-500 dark:text-gray-400">
-          <span>{{ formatDate(data.airedDate) }}</span>
-        </div>
       </header>
 
+      <div class="text-gray-500 dark:text-gray-400">
+        {{ formatDate(data.airedDate) }}
+      </div>
       <!-- Episode Content -->
-      <div class="prose">
+      <div class="prose mt-8">
         <ContentRenderer :value="data" />
       </div>
 
@@ -125,7 +132,8 @@ useSeoMeta({
           >
             <UIcon name="lucide:chevron-left" class="mr-2" />
             <span class="ml-1">
-              Episode {{ surround.prev.meta?.episodeDisplay ?? surround.prev.episode }}
+              Episode
+              {{ surround.prev.meta?.episodeDisplay ?? surround.prev.episode }}
             </span>
           </NuxtLink>
           <span v-else />
@@ -136,7 +144,8 @@ useSeoMeta({
             class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
           >
             <span class="mr-1">
-              Episode {{ surround.next.meta?.episodeDisplay ?? surround.next.episode }}
+              Episode
+              {{ surround.next.meta?.episodeDisplay ?? surround.next.episode }}
             </span>
             <UIcon name="lucide:chevron-right" class="ml-2" />
           </NuxtLink>

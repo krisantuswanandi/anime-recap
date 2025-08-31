@@ -8,6 +8,14 @@ type Props = {
 };
 
 defineProps<Props>();
+
+function formatDate(dateString: string) {
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 </script>
 
 <template>
@@ -32,7 +40,7 @@ defineProps<Props>();
         {{ title }}
       </h3>
       <p v-if="airedDate" class="mt-1 text-xs text-gray-500 dark:text-gray-400">
-        {{ airedDate }}
+        {{ formatDate(airedDate) }}
       </p>
     </div>
   </NuxtLink>

@@ -61,16 +61,49 @@ const episodes = computed(() => {
   });
 });
 
+// Collapsible description (show first paragraph or up to N chars)
+const isDescriptionExpanded = ref(false);
+const DESCRIPTION_CHAR_LIMIT = 280;
+
+const fullDescription = computed(() => anime.value?.description?.trim() ?? "");
+
+const firstParagraph = computed(() => {
+  const d = fullDescription.value;
+  if (!d) return "";
+  const parts = d.split(/\n\s*\n/); // paragraphs separated by blank line
+  return (parts[0] || d).trim();
+});
+
+const needsDescriptionToggle = computed(() => {
+  const d = fullDescription.value;
+  if (!d) return false;
+  if (/\n\s*\n/.test(d)) return true; // multiple paragraphs
+  return firstParagraph.value.length > DESCRIPTION_CHAR_LIMIT;
+});
+
+const collapsedDescription = computed(() => {
+  const p = firstParagraph.value;
+  if (p.length <= DESCRIPTION_CHAR_LIMIT) return p;
+  return p.slice(0, DESCRIPTION_CHAR_LIMIT).trimEnd() + "…";
+});
+
 useSeoMeta({
   title: anime.value?.title
     ? `${anime.value.title} | Anime Recap`
     : "Anime Detail | Anime Recap",
   description: anime.value?.description,
 });
+
+const breadcrumbs = computed(() => [
+  { label: "Home", to: "/" },
+  { label: "Anime", to: "/anime" },
+  { label: anime.value?.title || id },
+]);
 </script>
 
 <template>
   <div>
+    <Breadcrumbs :items="breadcrumbs" />
     <!-- Loading / Error States -->
     <div v-if="animePending" class="text-center py-8">
       <p class="text-gray-500 dark:text-gray-400">Loading anime...</p>
@@ -86,12 +119,12 @@ useSeoMeta({
     </div>
 
     <!-- Anime Detail -->
-    <div v-else>
-      <div class="flex gap-4 items-start">
+    <div v-else class="mt-8">
+      <div class="flex flex-col md:flex-row gap-4 items-start">
         <NuxtImg
           v-if="anime.cover"
           :src="anime.cover"
-          class="rounded w-60 aspect-[3/4] object-cover"
+          class="rounded min-w-32 w-32 aspect-[3/4] object-cover"
         />
         <div>
           <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
@@ -101,7 +134,20 @@ useSeoMeta({
             v-if="anime.description"
             class="text-gray-600 dark:text-gray-300 mt-2"
           >
-            {{ anime.description }}
+            <p class="whitespace-pre-line">
+              {{
+                isDescriptionExpanded ? fullDescription : collapsedDescription
+              }}
+              <UButton
+                v-if="needsDescriptionToggle"
+                class="p-0"
+                variant="link"
+                color="secondary"
+                @click="isDescriptionExpanded = !isDescriptionExpanded"
+              >
+                {{ isDescriptionExpanded ? "See less" : "See more" }}
+              </UButton>
+            </p>
           </div>
           <div class="mt-2 flex gap-2">
             <NuxtLink

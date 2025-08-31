@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 6;
 
 type EpisodeMeta = {
   animeTitle?: string;
@@ -16,13 +16,7 @@ type Episode = {
   meta?: EpisodeMeta & Record<string, unknown>;
 };
 
-function formatDate(dateString: string) {
-  return new Date(dateString).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
+// Note: date formatting is handled inside ArticleCard
 
 const {
   data: initial,
@@ -69,12 +63,20 @@ useSeoMeta({
   title: "All Recaps | Anime Recap",
   description: "Browse all anime episode recaps with simple pagination.",
 });
+
+const recapBreadcrumbs = [
+  { label: "Home", to: "/" },
+  { label: "Recaps" },
+];
 </script>
 
 <template>
   <div>
-    <div>
-      <h1 class="text-4xl font-bold text-gray-900 dark:text-white">All Recaps</h1>
+    <Breadcrumbs :items="recapBreadcrumbs" />
+    <div class="mt-8">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+        All Recaps
+      </h1>
       <p class="text-gray-600 dark:text-gray-300">Browse episode recaps</p>
     </div>
 
@@ -83,35 +85,28 @@ useSeoMeta({
     </div>
 
     <div v-else-if="error" class="text-center py-8">
-      <p class="text-red-500 dark:text-red-400">Error loading episodes: {{ error }}</p>
+      <p class="text-red-500 dark:text-red-400">
+        Error loading episodes: {{ error }}
+      </p>
     </div>
 
     <div v-else>
-      <div v-if="episodes.length" class="mt-4 space-y-4">
-        <NuxtLink
+      <div
+        v-if="episodes.length"
+        class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4"
+      >
+        <ArticleCard
           v-for="episode in episodes"
           :key="episode.id"
           :to="episode.path"
-          class="block no-underline"
+          :image="episode.meta?.thumbnail || undefined"
+          :image-alt="`${episode.meta?.animeTitle} episode ${episode.meta?.episodeDisplay} thumbnail`"
+          :title="episode.title"
+          :subtitle="`${episode.meta?.animeTitle} Episode ${episode.meta?.episodeDisplay}`"
+          :date="episode.airedDate"
+          :description="episode.description"
           :aria-label="`${episode.meta?.animeTitle} Episode ${episode.meta?.episodeDisplay}, ${episode.title}`"
-        >
-          <article class="flex gap-4">
-            <div class="rounded min-w-52 h-30 bg-gray-300 overflow-hidden">
-              <NuxtImg v-if="episode.meta?.thumbnail" :src="episode.meta.thumbnail" class="w-full h-full" />
-            </div>
-            <div>
-              <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-                {{ episode.meta?.animeTitle }} Episode {{ episode.meta?.episodeDisplay }}, "{{ episode.title }}"
-              </h2>
-              <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
-                <span>{{ formatDate(episode.airedDate) }}</span>
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mt-2 line-clamp-2">
-                {{ episode.description }}
-              </p>
-            </div>
-          </article>
-        </NuxtLink>
+        />
       </div>
 
       <div v-else class="text-center py-8">
@@ -120,14 +115,16 @@ useSeoMeta({
 
       <div class="mt-6 flex justify-center">
         <UButton
-          color="primary"
+          v-if="!noMore"
+          color="neutral"
+          variant="soft"
           :loading="loadingMore"
           :disabled="noMore"
           @click="loadMore"
         >
-          <span v-if="!noMore">See more</span>
-          <span v-else>No more recaps</span>
+          Load more
         </UButton>
+        <span v-else class="italic text-gray-400 text-sm">No more recap</span>
       </div>
     </div>
   </div>
