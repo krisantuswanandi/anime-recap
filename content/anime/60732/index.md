@@ -5,7 +5,7 @@ description: "Ryo is delighted to be reincarnated into the fantastical world of 
 season: "Summer 2025"
 status: "Ongoing"
 startDate: "2025/07/04"
-endDate: "2025/11/19"
+endDate: "2025/09/19"
 myanimelistId: "60732"
 anilistId: "186052"
 cover: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx186052-zq8h0Qo0O0sP.jpg"
